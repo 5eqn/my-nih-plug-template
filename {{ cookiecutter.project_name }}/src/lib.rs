@@ -1,6 +1,6 @@
 use atomic_float::AtomicF32;
 use nih_plug::prelude::*;
-use nih_plug_iced::IcedState;
+use nih_plug_vizia::ViziaState;
 use std::sync::Arc;
 
 mod editor;
@@ -9,7 +9,7 @@ mod editor;
 const PEAK_METER_DECAY_MS: f64 = 150.0;
 
 /// This is mostly identical to the gain example, minus some fluff, and with a GUI.
-struct {{ cookiecutter.struct_name }} {
+pub struct {{ cookiecutter.struct_name }} {
     params: Arc<{{ cookiecutter.struct_name }}Params>,
 
     /// Needed to normalize the peak meter's response based on the sample rate.
@@ -27,7 +27,7 @@ struct {{ cookiecutter.struct_name }}Params {
     /// The editor state, saved together with the parameter state so the custom scaling can be
     /// restored.
     #[persist = "editor-state"]
-    editor_state: Arc<IcedState>,
+    editor_state: Arc<ViziaState>,
 
     #[id = "gain"]
     pub gain: FloatParam,
