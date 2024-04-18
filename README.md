@@ -5,7 +5,7 @@ This template can be used with
 [NIH-plug](https://github.com/robbert-vdh/nih-plug) project:
 
 ```bash
-cookiecutter gh:robbert-vdh/nih-plug-template
+cookiecutter gh:5eqn/my-nih-plug-template
 ```
 
 Check out the generated project's readme for building instructions.
